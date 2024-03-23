@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --color-nutmeg: hsl(14, 45%, 36%);
+    --color-dark-respberry: hsl(332, 51%, 32%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-rose-white: hsl(330, 100%, 98%);
+    --color-eggshell: hsl(30, 54%, 90%);
+    --color-loght-grey: hsl(30, 18%, 87%);
+    --color-wenge-brown: hsl(30, 10%, 34%);
+    --color-dark-charcoal: hsl(24, 5%, 18%);
+
+    --font-size: 16px;
+    --font-family-young-serif: 'Young Serif', serif;
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-weight-regualr: 400;
+    --font-weight-bold: 600;
+    --font-weight-extra-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    margin-left: 20px;
+}
+
+body {
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size);
+    background-color: var(--color-eggshell);
+    color: var(--color-dark-charcoal);
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+}
+
+h1,
+h2 {
+    font-family: var(--font-family-young-serif);
+    font-weight: var(--font-weight-regualr);
+}
+
+h2 {
+    color: var(--color-nutmeg);
+}
+
+hr {
+    border: 1px solid var(--color-loght-grey);
+    margin: 20px 0;
+}
+
+#recipe-card {
+    background-color: var(--color-white);
+    max-width: 700px;
+    width: 100%;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 100px auto;
+}
+
+#recipe-card * {
+    margin-bottom: 15px;
+}
+
+#recipe-card>img {
+    border-radius: 10px;
+}
+
+#recipe-card>p {
+    color: var(--color-wenge-brown);
+}
+
+#recipe-card__preparation {
+    background-color: var(--color-rose-white);
+    border-radius: 10px;
+    padding: 25px 25px 10px 25px;
+}
+
+#recipe-card__preparation li::marker {
+    color: var(--color-dark-respberry);
+}
+
+#recipe-card__preparation span {
+    font-weight: var(--font-weight-bold);
+}
+
+#recipe-card__preparation>h3 {
+    color: var(--color-dark-respberry);
+}
+
+.steps>li {
+    color: var(--color-wenge-brown);
+    font-size: calc(var(--font-size) * 0.9);
+    word-spacing: 2px;
+    padding-left: 12px;
+}
+
+.steps>li>span {
+    font-weight: var(--font-weight-bold);
+    margin-right: 3px;
+}
+
+.steps>li::marker {
+    color: var(--color-nutmeg);
+}

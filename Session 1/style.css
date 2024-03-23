@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #3766e7;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ol {
+    text-align: center;
+    list-style-type: none;
+}
+
+ol>li {
+    font-weight: bold;
+    border: 1px solid #3766e7;
+    border-radius: 2px;
+    width: 200px;
+    margin: 5px auto;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+ol>li:hover {
+    background-color: #3766e7;
+    color: white;
+}

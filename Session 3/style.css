@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primary: hsl(75, 64%, 57%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-gry: hsl(0, 0%, 20%);
+    --color-neutral-dark-grey: hsl(0, 0%, 12%);
+    --color-neutral-off-black: hsl(0, 0%, 8%);
+    --color-neutral-red-light: hsl(0, 100%, 80%);
+
+    --font-family: 'Inter', sans-serif;
+    --font-size: 14px;
+    --font-weight-reg: 400;
+    --font-weight-semi: 600;
+    --font-weight-bold: 700;
+
+    --container-width: 400px;
+    --container-radius: 7px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-reg);
+    background-color: var(--color-neutral-off-black);
+    color: var(--color-neutral-white);
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+img {
+    display: block;
+}
+
+#container {
+    height: fit-content;
+    width: var(--container-width);
+    background-color: var(--color-neutral-dark-grey);
+    padding: 40px;
+    text-align: center;
+    border-radius: var(--container-radius);
+}
+
+#container__image {
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    width: 100px;
+}
+
+#container__title {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semi);
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+#container__address {
+    font-size: .9rem;
+    font-weight: var(--font-weight-semi);
+    color: var(--color-primary);
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+#container>q {
+    font-size: .9rem;
+    font-weight: var(--font-weight-reg);
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+    word-spacing: 2px;
+}
+
+#container__links {
+    width: 100%;
+    height: fit-content;
+}
+
+#container__links>a {
+    color: var(--color-neutral-white);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    display: block;
+    background-color: var(--color-neutral-gry);
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: var(--container-radius);
+    transition: all 0.2s;
+}
+
+#container__links>a:last-child {
+    margin-bottom: 0;
+}
+
+#container__links>a:is( :hover, :focus) {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-off-black);
+    scale: 1.05;
+}
+
+@media (max-width: 500px) {
+    :root {
+        --font-size: 12px;
+        --container-width: 100%;
+    }
+
+    #container {
+        padding: 15px;
+    }
+}

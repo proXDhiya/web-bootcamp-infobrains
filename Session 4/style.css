@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-primary: hsl(47, 88%, 63%);
+    --color-nautral-white: hsl(0, 0%, 100%);
+    --color-nautral-grey: hsl(0, 0%, 50%);
+    --color-nautral-black: hsl(0, 0%, 7%);
+    --font-family: 'Figtree', sans-serif;
+    --font-weight-reg: 500;
+    --font-weight-bold: 800;
+    --font-size: 16px;
+    /*Container*/
+    --container-background-color: var(--color-nautral-white);
+    --container-width: 400px;
+    --container-padding: 22px;
+    --container-border-raduis: 10px;
+    --container-shadow-size: 5px;
+    --container-shadow: var(--container-shadow-size) var(--container-shadow-size) var(--color-nautral-black);
+    /*tag*/
+    --tag-padding-x: 7px;
+    --tag-padding-y: 14px;
+    --tag-padding: var(--tag-padding-x) var(--tag-padding-y);
+    --tag-background-color: var(--color-primary);
+    --tag-text-color: var(--color-nautral-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-reg);
+    font-size: var(--font-size);
+    color: var(--color-nautral-black);
+    background-color: var(--color-primary);
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+}
+
+p {
+    color: var(--color-nautral-grey);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+}
+
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+.container {
+    background-color: var(--container-background-color);
+    width: var(--container-width);
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: var(--container-padding);
+    border-radius: calc(var(--container-padding) - var(--container-border-raduis));
+    border: 1px solid var(--color-nautral-black);
+    box-shadow: var(--container-shadow);
+}
+
+.container>img {
+    width: 100%;
+    border-radius: var(--container-border-raduis);
+}
+
+.tag {
+    background-color: var(--tag-background-color);
+    color: var(--tag-text-color);
+    font-weight: var(--font-weight-bold);
+    padding: var(--tag-padding);
+    width: fit-content;
+    border-radius: calc(var(--container-padding) - var(--tag-padding-x) - var(--container-border-raduis));
+}
+
+.container__date {
+    color: var(--color-nautral-black)
+}
+
+.container__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container__user>img {
+    width: 35px;
+}
+
+@media (max-width: 500px) {
+    :root {
+        --font-size: 12px;
+        --container-width: 300px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
